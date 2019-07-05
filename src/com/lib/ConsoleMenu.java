@@ -16,8 +16,8 @@ public class ConsoleMenu implements Menu {
                 int index = -1;
                 boolean loopFlag = true;
                 while (loopFlag) {
-                    clearConsole();
-                    System.out.println("Выберите контроллер:");
+                   
+                    System.out.println("Выберите словарь:");
                     printDictionariesList();
                     System.out.println("Выход");
                     if (scanner.hasNextInt()) {
@@ -36,7 +36,7 @@ public class ConsoleMenu implements Menu {
                 Dictionary currentFileProperties = dictionaries[index];
                 String command = "";
                 while (!command.equals("Выход")) {
-                    clearConsole();
+                  
                     System.out.println("Выберете команду:");
                     System.out.println("1-Вывод всех пар");
                     System.out.println("2-Удаление по ключу");
@@ -68,7 +68,7 @@ public class ConsoleMenu implements Menu {
                             putValue(currentFileProperties, key, value);
                             break;
                         }
-                        case "exit":
+                        case "Выход":
                             break;
                         default:
                             System.out.println("Неверная команда!");
@@ -105,8 +105,6 @@ public class ConsoleMenu implements Menu {
     }
 
     private void clearConsole() {
-        for (int i = 0; i < 50; i++) {
             System.out.println();
-        }
     }
 }
