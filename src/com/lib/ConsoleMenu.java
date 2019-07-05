@@ -23,7 +23,7 @@ public class ConsoleMenu implements Menu {
                     if (scanner.hasNextInt()) {
                         index = scanner.nextInt();
                         if (index < 0) System.out.println("Число словарей не может быть меньше 0");
-                        else if (index > 0) System.out.println("Число не может быть больше колличества словарей");
+                        else if (index > 1) System.out.println("Число не может быть больше колличества словарей");
                         else loopFlag = false;
                     } else {
                         interrupt = scanner.nextLine().equals("Выход");
