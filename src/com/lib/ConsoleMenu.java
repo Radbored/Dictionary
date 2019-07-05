@@ -37,7 +37,7 @@ public class ConsoleMenu implements Menu {
                 String command = "";
                 while (!command.equals("Выход")) {
                     clearConsole();
-                    System.out.println("Select command:");
+                    System.out.println("Выберете команду:");
                     System.out.println("1-Вывод всех пар");
                     System.out.println("2-Удаление по ключу");
                     System.out.println("3-Получение по ключу");
