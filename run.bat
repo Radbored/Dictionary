@@ -1,3 +1,3 @@
-javac -d out -sourcepath src src/com/example/MainClass.java
-java -classpath out com.example.MainClass
+javac -d bin -sourcepath src src\com\MainClass.java
+java -classpath bin com.lib.MainClass
 pause
