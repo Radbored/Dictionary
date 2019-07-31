@@ -1,17 +1,20 @@
 package example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.Scanner;
 import java.util.Map;
-
+@Component
 public class ConsoleMenu implements Menu {
   private Dictionary[] dictionaries;
-  private boolean interrupt = false;
-
+  @Autowired
   public ConsoleMenu(Dictionary... dictionaries) {
     this.dictionaries = dictionaries;
   }
 
   public void run() {
+    boolean interrupt = false;
     try (Scanner scanner = new Scanner(System.in)) {
       while (true) {
         int index = -1;
